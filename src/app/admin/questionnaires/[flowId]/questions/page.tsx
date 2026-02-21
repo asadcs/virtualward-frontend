@@ -11890,7 +11890,11 @@ export default function QuestionManagementPage() {
       return false;
     }
 
+    // function getRoots(cat: Category) {
+    //   return flow.nodes.filter((n) => n.category === cat && !n.parent_node_key);
+    // }
     function getRoots(cat: Category) {
+      if (!flow) return [];
       return flow.nodes.filter((n) => n.category === cat && !n.parent_node_key);
     }
 
