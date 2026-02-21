@@ -548,9 +548,11 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE ??
-  "https://virtualwardbackend-production.up.railway.app";
+// const API_BASE =
+//   process.env.NEXT_PUBLIC_API_BASE ??
+//   "https://virtualwardbackend-production.up.railway.app";
+
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "/api";
 
 type LoginResponse = { access_token: string; refresh_token: string };
 
